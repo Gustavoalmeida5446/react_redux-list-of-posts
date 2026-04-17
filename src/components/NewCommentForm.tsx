@@ -65,7 +65,12 @@ export const NewCommentForm: React.FC<Props> = ({ onSubmit }) => {
     setSubmitting(false);
 
     if (isSuccess) {
-      clearForm();
+      setValues(current => ({ ...current, body: '' }));
+      setErrors({
+        name: false,
+        email: false,
+        body: false,
+      });
     }
   };
 
