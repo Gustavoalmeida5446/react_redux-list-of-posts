@@ -101,7 +101,7 @@ const postsSlice = createSlice({
   name: 'posts',
   initialState: postsInitialState,
   reducers: {
-    clearPosts: () => postsInitialState,
+    clearPosts: () => ({ ...postsInitialState }),
   },
   extraReducers: builder => {
     builder
@@ -127,7 +127,7 @@ const commentsSlice = createSlice({
   name: 'comments',
   initialState: commentsInitialState,
   reducers: {
-    clearComments: () => commentsInitialState,
+    clearComments: () => ({ ...commentsInitialState }),
   },
   extraReducers: builder => {
     builder

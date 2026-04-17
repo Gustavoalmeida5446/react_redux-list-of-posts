@@ -37,8 +37,10 @@ export const PostDetails: React.FC<Props> = ({ post }) => {
     );
 
     if (addCommentRequest.fulfilled.match(action)) {
-      setVisible(false);
+      return true;
     }
+
+    return false;
   };
 
   const deleteComment = async (commentId: number) => {
